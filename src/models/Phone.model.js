@@ -27,6 +27,7 @@ const phoneSchema = new Schema({
   },
   imageFileName: {
     required: true,
+    default: "https://res.cloudinary.com/phector27/image/upload/v1664961201/iPhone-14-PNG-Transparent_ncxit9.png",
     type: String
   },
   screen: {
