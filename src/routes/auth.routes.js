@@ -66,7 +66,8 @@ router.post('/login', async (req, res) => {
     
     res.header('auth-token', token).json({
       error: null,
-      data: { token }
+      data: { token },
+      isAdmin: user.role === 'admin'
     })
   })
 })
