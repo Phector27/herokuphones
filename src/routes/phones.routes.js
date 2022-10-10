@@ -72,7 +72,7 @@ router.delete('/delete/:id', async (req, res) => {
     if (!data) {
       return res.status(404).json({ message: 'Cannot find data' })
     }
-    res.json({message: `Document with ${data.name} has been deleted..`})
+    res.json({message: `Document with ${data.name} has been deleted..`, id})
   } catch (error) {
       res.status(400).json({ message: error.message })
   }
