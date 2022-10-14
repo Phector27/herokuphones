@@ -10,6 +10,8 @@ You can also see the REST API collection here:
 
 https://documenter.getpostman.com/view/13518759/2s8479ybUD
 
+Note: CD/CI applied. Github linked to heroku for continuous and automated deployment.
+
 These are the endpoints with which to obtain information:
 
 **Remember that 'auth-token' header must be sent in order to obtain information from the /api endpoints.**
@@ -69,4 +71,3 @@ These are the endpoints with which to obtain information:
 The MongoDB database has been used for data persistence.
 
 ## Héctor Carramiñana Ramos.
-
