@@ -2,8 +2,6 @@
 
 API REST instructions.
 
-Easy:
-
 You can import the JSON collection from postman that is included in the main directory.
 
 You can also see the REST API collection here:
