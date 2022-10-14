@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "1ae10c10-1450-4d82-901a-8c58e21037d6",
+		"name": "OneBeyond",
+		"description": "Here you will find the information and requests needed to get the data correctly from the OneBeyond API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13518759"
+	},
+	"item": [
+		{
+			"name": "Phones data",
+			"item": [
+				{
+					"name": "Save new phones data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{apiToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 100, \n    \"name\": \"iPhone 14 Pro Max\", \n    \"manufacturer\": \"Apple\", \n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\", \n    \"color\": \"Mid Night Blue\", \n    \"price\": 1499, \n    \"screen\": \"6,7 inch IPS\", \n    \"processor\": \"A16\", \n    \"ram\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/api/createOne",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"createOne"
+							]
+						},
+						"description": "You must add 'auth-token' header to get API data.\n\nIn .json collection file, I'm added a script in which if you log in by postman, the token is automatically stored."
+					},
+					"response": []
+				},
+				{
+					"name": "Get all phones data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{apiToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/api/getAll",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"getAll"
+							]
+						},
+						"description": "You must add 'auth-token' header to get API data.\n\nIn .json collection file, I'm added a script in which if you log in by postman, the token is automatically stored."
+					},
+					"response": []
+				},
+				{
+					"name": "Get phone data by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{apiToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/api/getOne/6347f636ab3b54a6466ea607",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"getOne",
+								"6347f636ab3b54a6466ea607"
+							]
+						},
+						"description": "You must add 'auth-token' header to get API data.\n\nIn .json collection file, I'm added a script in which if you log in by postman, the token is automatically stored."
+					},
+					"response": []
+				},
+				{
+					"name": "Update phone data",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{apiToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 200, \n    \"name\": \"iPhone 14 Pro Min\", \n    \"manufacturer\": \"Samsung\", \n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\", \n    \"color\": \"Red\", \n    \"price\": 1199, \n    \"imageFileName\": \"https://res.cloudinary.com/phector27/image/upload/v1664961201/iPhone-14-PNG-Transparent_ncxit9.png\", \n    \"screen\": \"6,7 inch IPS\", \n    \"processor\": \"A16\", \n    \"ram\": 16\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/api/update/6347f636ab3b54a6466ea607",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"update",
+								"6347f636ab3b54a6466ea607"
+							]
+						},
+						"description": "You must add 'auth-token' header to get API data.\n\nIn .json collection file, I'm added a script in which if you log in by postman, the token is automatically stored."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete phone data",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{apiToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/api/delete/63480560ab3b54a6466ea66a",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delete",
+								"63480560ab3b54a6466ea66a"
+							]
+						},
+						"description": "You must add 'auth-token' header to get API data.\n\nIn .json collection file, I'm added a script in which if you log in by postman, the token is automatically stored."
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD endpoints to:  \n  \nCreate  \nRead  \nUpdate  \nDelete"
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Prueba\",\n    \"email\":\"testing@testingmax.org\",\n    \"password\": \"test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/auth/register",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register endpoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Token must be created\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(responseJson.data.token).to.have.length > 0;",
+									"    pm.environment.set(\"apiToken\", responseJson.data.token);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@admin.com\",\n    \"password\": \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onebeyond-hector.herokuapp.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"onebeyond-hector",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login endpoint.  \n  \nI'm added a script in which if you log in by postman, the token is automatically stored."
+					},
+					"response": []
+				}
+			],
+			"description": "Register and login endpoints."
+		}
+	],
+	"variable": [
+		{
+			"key": "apiToken",
+			"value": "apiToken"
+		}
+	]
+}
